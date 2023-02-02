@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/brasil', function () {
+    return view('brasil');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
