@@ -21,6 +21,14 @@ Route::get('/brasil', function () {
     return view('brasil');
 });
 
+Route::get('/senegal', function () {
+    return view('senegal');
+});
+
+Route::get('/portugal', function () {
+    return view('portugal');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

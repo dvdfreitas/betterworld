@@ -79,13 +79,17 @@
         <h1 class="activecountry-mainpage-h1">Países Ativos</h1>
         <div class="homepage-country-container">
             <div class="homepage-country-divsingle">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" class="homepage-country-flag" alt="Country Flag">
-                <p class="hompeage-country-name">Senegal</p>
+                {{-- <a href="{{ route('senegal') }}"> --}}
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" class="homepage-country-flag" alt="Country Flag">
+                    <p class="hompeage-country-name">Senegal</p>
+                {{-- </a> --}}
             </div>
 
             <div class="homepage-country-divsingle">
-                <img src="https://www.estudopratico.com.br/wp-content/uploads/2016/04/bandeira-portugal-1200x675.jpg" class="homepage-country-flag" alt="Country Flag">
-                <p class="hompeage-country-name">Portugal</p>
+                {{-- <a href="{{ route('portugal') }}"> --}}
+                    <img src="https://www.estudopratico.com.br/wp-content/uploads/2016/04/bandeira-portugal-1200x675.jpg" class="homepage-country-flag" alt="Country Flag">
+                    <p class="hompeage-country-name">Portugal</p>
+                {{-- </a> --}}
             </div>
         </div>
     </div>
