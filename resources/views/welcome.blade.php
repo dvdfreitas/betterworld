@@ -17,22 +17,25 @@
 
         .welcome-mainpage-h1{
             font-size: 50px;
+            color: rgb(223, 8, 8);
             /* color: rgb(8, 223, 48); */
-            color: rgb(255, 217, 3);
+            /* color: rgb(255, 217, 3); */
             font-weight: bold;
             text-shadow: 3px 3px black;
         }
 
         .welcome-mainpage-h1-p{
             font-size: 30px;
-            color: white;
+            /* color: white; */
+            color: rgb(255, 217, 3);
             font-weight: bold;
             text-shadow: 3px 3px black;
         }
 
         .activecountry-mainpage-div{
-            background-color: rgb(175, 175, 175);
-            padding-top: 100px;
+            /* background-color: white; */
+            background-color: rgb(205, 205, 205);
+            padding-top: 50px;
             padding-bottom: 100px;
         }
 
@@ -54,10 +57,14 @@
             background-color: white;
         }
 
+        .homepage-country-divsingle a p{
+            font-weight: bold;
+        }
+
         .homepage-country-flag {
             width: 350px;
-            height: 205px;
-            object-fit: fill;
+            height: 185px;
+            object-fit: cover;
         }
 
         .hompeage-country-name{
@@ -79,17 +86,24 @@
         <h1 class="activecountry-mainpage-h1">Países Ativos</h1>
         <div class="homepage-country-container">
             <div class="homepage-country-divsingle">
-                {{-- <a href="{{ route('senegal') }}"> --}}
+                <a href="{{ url('/brasil') }}">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" class="homepage-country-flag" alt="Country Flag">
                     <p class="hompeage-country-name">Senegal</p>
-                {{-- </a> --}}
+                </a>
             </div>
 
             <div class="homepage-country-divsingle">
-                {{-- <a href="{{ route('portugal') }}"> --}}
+                <a href="{{ url('/brasil') }}">
                     <img src="https://www.estudopratico.com.br/wp-content/uploads/2016/04/bandeira-portugal-1200x675.jpg" class="homepage-country-flag" alt="Country Flag">
                     <p class="hompeage-country-name">Portugal</p>
-                {{-- </a> --}}
+                </a>
+            </div>
+
+            <div class="homepage-country-divsingle">
+                <a href="{{ url('/brasil') }}">
+                    <img src="https://s3.static.brasilescola.uol.com.br/be/2021/11/bandeira-do-brasil.jpg" class="homepage-country-flag" alt="Country Flag">
+                    <p class="hompeage-country-name">Brasil</p>
+                </a>
             </div>
         </div>
     </div>
