@@ -19,7 +19,7 @@ Route::get('/', function () {
         'heading' => 'Main Page',
         'countries' => ActiveCountry::all()  
     ]);
-});
+})->name('home');
 
 Route::get('/brasil', function () {
     return view('brasil');

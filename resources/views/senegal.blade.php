@@ -1,6 +1,3 @@
 <x-guestLayout>
-    <h1>(( SENEGAL ))</h1>
-    <div>
-        <img src="" alt="">
-    </div>
+    <h1>SENEGAL</h1>
 </x-guestLayout>
