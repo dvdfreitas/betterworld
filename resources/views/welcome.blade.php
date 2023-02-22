@@ -1,8 +1,8 @@
 <x-guestLayout>
-
     <style>
         .welcome-mainpage-div{
             background-image: url("https://cdn.mos.cms.futurecdn.net/quJFc2kidnxhbtHdNDsrna.jpg");
+            opacity: 95%;
             height: 850px;
             width: 100%;
             background-position: center;
@@ -17,32 +17,30 @@
 
         .welcome-mainpage-h1{
             font-size: 50px;
-            color: rgb(223, 8, 8);
-            /* color: rgb(8, 223, 48); */
-            /* color: rgb(255, 217, 3); */
+            color: rgb(8, 223, 48);
             font-weight: bold;
             text-shadow: 3px 3px black;
         }
 
         .welcome-mainpage-h1-p{
             font-size: 30px;
-            /* color: white; */
-            color: rgb(255, 217, 3);
+            color: white;
             font-weight: bold;
             text-shadow: 3px 3px black;
         }
 
         .activecountry-mainpage-div{
-            /* background-color: white; */
-            background-color: rgb(205, 205, 205);
+            background-color: rgb(185, 185, 185);
             padding-top: 50px;
             padding-bottom: 100px;
         }
 
         .activecountry-mainpage-h1{
             font-size: 30px;
+            font-weight: bold;
             text-align: center;
             color: black;
+            margin-bottom: 20px;
         }
 
         .homepage-country-container{
@@ -70,6 +68,7 @@
         .hompeage-country-name{
             padding: 1px;
             font-size: 25px;
+            text-transform: capitalize;
         }
 
     </style>
@@ -85,26 +84,14 @@
     <div class="activecountry-mainpage-div">
         <h1 class="activecountry-mainpage-h1">Países Ativos</h1>
         <div class="homepage-country-container">
-            <div class="homepage-country-divsingle">
-                <a href="{{ url('/brasil') }}">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" class="homepage-country-flag" alt="Country Flag">
-                    <p class="hompeage-country-name">Senegal</p>
-                </a>
-            </div>
-
-            <div class="homepage-country-divsingle">
-                <a href="{{ url('/brasil') }}">
-                    <img src="https://www.estudopratico.com.br/wp-content/uploads/2016/04/bandeira-portugal-1200x675.jpg" class="homepage-country-flag" alt="Country Flag">
-                    <p class="hompeage-country-name">Portugal</p>
-                </a>
-            </div>
-
-            <div class="homepage-country-divsingle">
-                <a href="{{ url('/brasil') }}">
-                    <img src="https://s3.static.brasilescola.uol.com.br/be/2021/11/bandeira-do-brasil.jpg" class="homepage-country-flag" alt="Country Flag">
-                    <p class="hompeage-country-name">Brasil</p>
-                </a>
-            </div>
+            @foreach($countries as $country)
+                <div class="homepage-country-divsingle">
+                    <a href="{{ url($country->name) }}">
+                        <img src="{{$country->flag}}" class="homepage-country-flag" alt="Country Flag">
+                        <p class="hompeage-country-name">{{$country->name}}</p>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 </x-guestLayout>
